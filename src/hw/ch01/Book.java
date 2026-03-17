@@ -1,4 +1,4 @@
-package ch01.Sample;
+package hw.ch01;
 
 public class Book {
     private String name;
