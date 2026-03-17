@@ -4,6 +4,9 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("학번: 20220934, 이름: 이하늘");
+
+
         //책 테스트
         Book book = new Book("Java Programming");
         System.out.println("Book Name: " + book.getName());
