@@ -31,4 +31,15 @@ public class BookShelf implements Iterable<Book>{
     }
 
     // ctrl+/ = 주석처리
+
+    // 장르 필터 iterator 반환
+    public Iterator<Book> iteratorByGenre(String genre) {
+        return new BookShelfGenreIterator(this, genre);
+    }
+
+    // 출판연도 역순 iterator 반환
+    public Iterator<Book> iteratorByYear() {
+        return new BookShelfYearIterator(this);
+    }
+
 }

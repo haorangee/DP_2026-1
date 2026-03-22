@@ -8,7 +8,7 @@ public class BookShelf implements Iterable<Book> {
     private List<Book> books; //List는 인터페이스임
 
     public BookShelf(int initialsize) {
-        this.books = new ArrayList<>(initialsize);
+        this.books = new ArrayList<>(initialsize);  //초깃값 받아서 ArrayList 객체 생성해서 books에 할당
     }
 
     public Book getBookAt(int index) {

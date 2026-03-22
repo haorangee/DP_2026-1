@@ -7,39 +7,37 @@ public class Main {
         System.out.println("학번: 20220934, 이름: 이하늘");
 
 
-        //책 테스트
-        Book book = new Book("Java Programming");
-        System.out.println("Book Name: " + book.getName());
-
         //책장 테스트
-        BookShelf bookShelf = new BookShelf(5);
-        bookShelf.appendBook(new Book("Java Programming"));
-        bookShelf.appendBook(new Book("Python Programming"));
-        bookShelf.appendBook(new Book("C++ Programming"));
+        BookShelf bookShelf = new BookShelf(10);
 
-        //책장에 있는 책 목록 출력
-        //방법1: 책꽂이에 클라이언트가 직접 접근해서 책을 꺼내는 방식
-        System.out.println("Books in the bookshelf:");
-        for (int i = 0; i < bookShelf.getLength(); i++) {
-            System.out.println("- " + i + ": " + bookShelf.getBookFrom(i).getName());
+        bookShelf.appendBook(new Book("클린코드", "기술", 2008, 30000));
+        bookShelf.appendBook(new Book("해리포터와 마법사의 돌", "소설", 1997, 15000));
+        bookShelf.appendBook(new Book("사피엔스", "역사", 2011, 18000));
+        bookShelf.appendBook(new Book("이펙티브 자바", "기술", 2018, 36000));
+        bookShelf.appendBook(new Book("객체지향의 사실과 오해", "기술", 2015, 20000));
+        bookShelf.appendBook(new Book("레미제라블", "소설", 1862, 12000));
+        bookShelf.appendBook(new Book("총균쇠", "역사", 1997, 22000));
+        bookShelf.appendBook(new Book("리팩터링", "기술", 2018, 34000));
+        bookShelf.appendBook(new Book("로마인 이야기", "역사", 1992, 25000));
+        bookShelf.appendBook(new Book("어린왕자", "소설", 1943, 9000));
+        
+        System.out.println("\n[장르 필터 Iterator 테스트 - 소설]");
+        Iterator<Book> genreIt = bookShelf.iteratorByGenre("소설");
+        while (genreIt.hasNext()) {
+            Book yearBook = genreIt.next();
+            printBook(yearBook);
         }
 
-        //방법2: 책꽂이에 반복자(irerator)를 만들어서 책을 꺼내는 방식
-        System.out.println("\nBooks in the bookshelf (using iterator):");
-        Iterator<Book> it = bookShelf.iterator();
-        while (it.hasNext()) {
-            System.out.println("- " + it.next().getName());
+        System.out.println("\n[출판연도 역순 Iterator 테스트]");
+        Iterator<Book> yearIt = bookShelf.iteratorByYear();
+        while (yearIt.hasNext()) {
+            Book yearBook = yearIt.next();
+            printBook(yearBook);
         }
+    }
 
-        //여기 코드 다시 이해하기**
-        //방법3: 책꽂이에 반복자(irerator)를 만들어서 책을 꺼내는 방식, (for-each 문) 향상된 for문
-        //형식: for (타입 변수명 : 컬렉션) { ... }
-        for (Book b : bookShelf) { //Iterable 인터페이스를 구현했기 때문에 for-each 문을 사용할 수 있음, bookShelf.iterator()가 자동으로 호출됨
-            System.out.println("- " + b.getName());
-        }
-
-
-
-
+    private static void printBook(Book book) {
+        System.out.printf("제목: %s | 장르: %s | 출판연도: %d | 가격: %.0f원%n",
+                book.getName(), book.getGenre(), book.getYear(), book.getPrice());
     }
 }
