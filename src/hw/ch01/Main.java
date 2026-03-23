@@ -28,8 +28,8 @@ public class Main {
             printBook(yearBook);
         }
 
-        System.out.println("\n[출판연도 역순 Iterator 테스트]");
-        Iterator<Book> yearIt = bookShelf.iteratorByYear();
+        System.out.println("\n[출판연도 역순 Iterator 테스트 - 소설]");
+        Iterator<Book> yearIt = bookShelf.iteratorByYear("소설");
         while (yearIt.hasNext()) {
             Book yearBook = yearIt.next();
             printBook(yearBook);

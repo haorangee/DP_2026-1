@@ -38,8 +38,8 @@ public class BookShelf implements Iterable<Book>{
     }
 
     // 출판연도 역순 iterator 반환
-    public Iterator<Book> iteratorByYear() {
-        return new BookShelfYearIterator(this);
+    public Iterator<Book> iteratorByYear(String genre) {
+        return new BookShelfYearIterator(this, genre);
     }
 
 }

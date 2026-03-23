@@ -9,10 +9,13 @@ public class BookShelfYearIterator implements Iterator<Book> {
     private List<Book> sortedBooks; //List는 인터페이스임
     private int index;
 
-    public BookShelfYearIterator(BookShelf bookShelf) {
+    public BookShelfYearIterator(BookShelf bookShelf, String genre) {
         sortedBooks = new ArrayList<>();
         for (int i = 0; i < bookShelf.getLength(); i++) {
-            sortedBooks.add(bookShelf.getBookFrom(i));
+            Book book = bookShelf.getBookFrom(i);
+            if (book.getGenre().equals(genre)) {
+                sortedBooks.add(book);
+            }
         }
         // 출판연도 역순으로 정렬
         sortedBooks.sort((b1, b2) -> Integer.compare(b2.getYear(), b1.getYear()));
