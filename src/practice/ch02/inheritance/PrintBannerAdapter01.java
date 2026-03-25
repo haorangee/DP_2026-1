@@ -7,7 +7,7 @@ public class PrintBannerAdapter01 extends Banner implements Print {
     // (2) 생성자는 상속되지 않는다
 
     public PrintBannerAdapter01(String string) {  //생성자는 String을 받는다.
-        super(string);  //부모 생성자를 호출함
+        super(string);  //super: 부모 생성자를 호출함
     }
 
    
