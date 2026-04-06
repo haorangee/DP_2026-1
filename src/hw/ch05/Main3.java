@@ -21,5 +21,3 @@ public class Main3 {
         System.out.println(logger3a.getLog());
     }
 }
-
-
