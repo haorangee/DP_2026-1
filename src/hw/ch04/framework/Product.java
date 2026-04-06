@@ -1,9 +1,9 @@
-package practice.ch04.framework;
+package hw.ch04.framework;
 
 //일반적인 제품
 public abstract class Product {
     //제품의 생성시 항상 이름 강제로 저장하기 위해
-    public Product(String name, int serial) {
+    public Product(String name, int serial, String issuedDate) {
         // 생성자 구현
     }
 

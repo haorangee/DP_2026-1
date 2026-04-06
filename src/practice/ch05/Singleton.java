@@ -11,7 +11,8 @@ public class Singleton {
     }
     
     // (2) Singleton 객체를 얻어가는 메소드를 정의한다.
-    // Singleton 객체 생성되기 전에 getInstance() 메소드를 호출하기 위해서 Static으로 선언한다. Static을 붙여서 클래스에 속하도록
+    // Singleton 객체 생성되기 전에 getInstance() 메소드를 호출하기 위해서 Static으로 선언한다. 
+    // Static을 붙여서 클래스에 속하도록
     public static Singleton getInstance() {
         return singleton; // (4) getInstance() 메소드에서는 static 변수에 저장된 미리 만들어진 Singleton 객체의 주소를 리턴한다.
     }
