@@ -8,7 +8,7 @@ public class IDCard extends Product {
     private int serial;
     private String issuedDate;  //발급 날짜
 
-    //Main이 얘를 호출할려면 누구나 불러올 수 있도록 public으로 만들어야 한다.
+    // Main이 얘를 호출할려면 누구나 불러올 수 있도록 public으로 만들어야함. 
     public IDCard(String owner, int serial, String issuedDate) {
         super(owner, serial, issuedDate);
 

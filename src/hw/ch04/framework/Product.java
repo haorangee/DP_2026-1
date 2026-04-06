@@ -7,7 +7,8 @@ public abstract class Product {
         // 생성자 구현
     }
 
-    //제품을 사용하기 위한 API가 use()라고 생각해보자.
-    //제품은 항상 use() 메소드를 구현해줘야 함
+    //제품을 사용하기 위한 API가 use()라고 생각
+    //제품은 항상 use() 메소드를 구현해줘야 함 
+    //제품마다 다르게 구현될 수 있기 때문에 추상메소드로 선언
     public abstract void use();
 }

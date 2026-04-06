@@ -11,7 +11,7 @@ public class Main {
         System.out.println("학번: 20220934, 이름: 이하늘");
 
 
-         // [3-1] Step 1: IDCard 정보 확장
+         // [3-1] Step 1: IDCard 정보 확장하기
         System.out.println("[ Step 1: IDCard 테스트 ]");
        
         Factory factory1 = new IDCardFactory("2026-03-20");
