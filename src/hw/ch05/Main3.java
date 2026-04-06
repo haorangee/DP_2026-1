@@ -4,8 +4,8 @@ public class Main3 {
     public static void main(String[] args) {
         
         System.out.println("===== 방식 3: Enum (권장) =====");
-        LoggerEnum logger3a = LoggerEnum.INSTANCE;
-        LoggerEnum logger3b = LoggerEnum.INSTANCE;
+        LoggerEnum logger3a = LoggerEnum.getInstance("INSTANCE");
+        LoggerEnum logger3b = LoggerEnum.getInstance("INSTANCE");
 
         logger3a.log("Enum Message 1");
         logger3b.log("Enum Message 2");
