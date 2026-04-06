@@ -8,7 +8,8 @@ public class LicenseCard extends Product {
     private String issuedDate;
     private String expiryDate;
 
-    // 생성자: LicenseCard(String holder, int licenseNumber, String issuedDate, String expiryDate)
+    //Main이 얘를 호출할려면 누구나 불러올 수 있도록 public으로 만들어야 한다.
+    //LicenseCard 생성자에서 부모 클래스인 Product의 생성자를 호출하여 holder, licenseNumber, issuedDate를 초기화함.
     public LicenseCard(String holder, int licenseNumber, String issuedDate, String expiryDate) {
         super(holder, licenseNumber, issuedDate);
 
@@ -19,6 +20,7 @@ public class LicenseCard extends Product {
         this.expiryDate = expiryDate;
     }
 
+    
     @Override
     public void use() {
         System.out.println(this.toString() + "운전면허증을 사용합니다.");

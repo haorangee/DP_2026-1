@@ -9,7 +9,7 @@ public class LicenseCardFactory extends Factory {
     private int licenseCounter = 100; // 면허번호 카운터 (100부터 시작)
     private String baseDate; // 발급 기준 날짜
 
-    // 생성자: LicenseCardFactory(String baseDate)
+    //생성자 
     public LicenseCardFactory(String baseDate) {
         this.baseDate = baseDate;
     }

@@ -10,7 +10,7 @@ public abstract class Factory {
         return p;
     }
 
-    //구체적인 공장이 구현해야 하는 추상메소드
+    //구체적인 공장이 구현해야 하는 추상메소드임
     protected abstract Product createProduct(String owner);
     protected abstract void registerProduct(Product product);
 }
