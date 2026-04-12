@@ -1,5 +1,6 @@
 package hw.ch05;
 
+// [2-2]
 public class Main2 {
     public static void main(String[] args) {
 

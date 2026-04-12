@@ -1,6 +1,6 @@
 package practice.ch06;
 
-import ch06.Sample.framework.Product;
+import practice.ch06.framework.Product;
 
 public class MessageBox implements Product {
     private char decochar;
@@ -11,14 +11,12 @@ public class MessageBox implements Product {
 
     @Override
     public void use(String s) {
-        int decolen = 1 + s.length() + 1;   // 양쪽에 1만큼 더해줘서 문자열 양쪽에 장식문자가 하나씩 들어갈 수 있도록 함 (출력할 폭)
+        int decolen = 1 + s.length() + 1;
         for (int i = 0; i < decolen; i++) {
             System.out.print(decochar);
         }
         System.out.println();
-
         System.out.println(decochar + s + decochar);
-        
         for (int i = 0; i < decolen; i++) {
             System.out.print(decochar);
         }
@@ -29,7 +27,7 @@ public class MessageBox implements Product {
     public Product createCopy() {
         Product p = null;
         try {
-            p = (Product)clone();
+            p = (Product)clone();  //자기 복제
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

@@ -22,6 +22,7 @@ public class Main {
         bookShelf.appendBook(new Book("어린왕자", "소설", 1943, 9000));
         
         System.out.println("\n[장르 필터 Iterator 테스트 - 소설]");
+        //장르 얻어내기 용 iterator
         Iterator<Book> genreIt = bookShelf.iteratorByGenre("소설");
         while (genreIt.hasNext()) {
             Book yearBook = genreIt.next();
@@ -29,6 +30,7 @@ public class Main {
         }
 
         System.out.println("\n[출판연도 역순 Iterator 테스트]");
+        //출판연도 역순으로 얻어내기 용 iterator
         Iterator<Book> yearIt = bookShelf.iteratorByYear();
         while (yearIt.hasNext()) {
             Book yearBook = yearIt.next();

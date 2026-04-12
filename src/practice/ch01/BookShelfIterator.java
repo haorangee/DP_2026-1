@@ -1,6 +1,7 @@
 package practice.ch01;
 
-import java.util.Iterator; //JDK에서 제공하는 Iterator 인터페이스를 사용하기 위해 import, 제너릭
+//JDK에서 제공하는 Iterator 인터페이스를 사용하기 위해 import, 제너릭
+import java.util.Iterator; 
 import java.util.NoSuchElementException;
 
 public class BookShelfIterator implements Iterator<Book> { //책을 하나씩 꺼내오는 반복자

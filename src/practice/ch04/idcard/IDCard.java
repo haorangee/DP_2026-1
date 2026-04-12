@@ -8,6 +8,7 @@ public class IDCard extends Product {
     private int serial;
 
     //Main이 얘를 호출할려면 누구나 불러올 수 있도록 public으로 만들어야 한다.
+    //아무나 이 생성자를 직접 호출 못하도록 (공장을 거쳐 호출하도록) public 안붙임
     IDCard(String owner, int serial) {
         super(owner, serial);
 

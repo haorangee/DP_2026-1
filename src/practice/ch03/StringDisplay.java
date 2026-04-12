@@ -1,11 +1,10 @@
 package practice.ch03;
 
-public class StringDisplay extends AbstractDisplay {
-    private String string;  // 표시해야 하는 문자열 
-    private int width;      // 문자열의 길이
+public class StringDisplay implements AbstractDisplay {
+    private String string;
+    private int width;
 
-    // 생성자 
-    public StringDisplay(String string) {  //String을 받아서 자기 속성에 담아둠
+    public StringDisplay(String string) {
         this.string = string;
         this.width = string.length();
     }
@@ -20,12 +19,11 @@ public class StringDisplay extends AbstractDisplay {
         System.out.println("|" + string + "|");
     }
 
-    @Override  //오버라이드: 해당 메소드는 부모에서 선언됐고, 자식이 재정의
+    @Override
     public void close() {
         printLine();
     }
 
-    // open과 close에서 호출되어 "+----+" 문자열을 표시하는 메소드
     private void printLine() {
         System.out.print("+");
 

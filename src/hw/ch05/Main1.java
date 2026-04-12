@@ -1,5 +1,6 @@
 package hw.ch05;
 
+// [2-1]
 public class Main1 {
     public static void main(String[] args) {
         System.out.println("학번: 20220934, 이름: 이하늘");

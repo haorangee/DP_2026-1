@@ -1,6 +1,7 @@
 package practice.ch01;
 
-import java.util.Iterator;
+//이미 정의된 java.util 패키지의 Iterator 인터페이스를 사용하기 위해 import
+import java.util.Iterator; 
 
 public class BookShelf implements Iterable<Book>{
 // public class BookShelf {
