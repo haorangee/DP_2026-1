@@ -42,5 +42,9 @@ public class Main {
             }
         }
 
+        System.out.println("Total result:");
+        System.out.println(player1);    
+        System.out.println(player2);
+
     }
 }

@@ -6,6 +6,7 @@ import hw.ch06.framework.Product;
 public class Main {
     public static void main(String[] args) {
        
+        System.out.println("학번: 20220934, 이름: 이하늘");
 
          // 준비 
         Manager manager = new Manager(); 
