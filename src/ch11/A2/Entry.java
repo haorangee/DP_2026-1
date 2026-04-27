@@ -35,7 +35,7 @@ public abstract class Entry {
         do {
             fullname.insert(0, entry.getName());
             fullname.insert(0, "/");
-            entry = entry.parent;
+            entry = entry.parent;  //현재 객체의 부모를 다시 Entry에 넣는다 (= 부모로 이동)
         } while (entry != null);
         return fullname.toString();
     }

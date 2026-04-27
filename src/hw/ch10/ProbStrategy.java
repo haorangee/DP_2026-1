@@ -1,4 +1,4 @@
-package practice.ch10;
+package hw.ch10;
 
 import java.util.Random;
 

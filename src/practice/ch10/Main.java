@@ -18,8 +18,8 @@ public class Main {
 
 
         //플레이어 2명 생성
-        Player player1 = new Player("이하늘", new WinningStrategy(314));
-        Player player2 = new Player("손흥민", new WinningStrategy(187));
+        Player player1 = new Player("이하늘", new WinningStrategy(314));  //하드코드(숫자 직접 써넣는 것) 되있음 (변경 어려워서 좋진 않음)
+        Player player2 = new Player("손흥민", new ProbStrategy(187));
 
         //게임 시키기
 

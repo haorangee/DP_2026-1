@@ -1,4 +1,4 @@
-package practice.ch10;
+package hw.ch10;
 
 //enum: 상수를 만들 때 사용
 public enum Hand {

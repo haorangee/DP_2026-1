@@ -1,4 +1,4 @@
-package practice.ch10;
+package hw.ch10;
 
 public class Player {
     private String name;
