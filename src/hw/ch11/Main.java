@@ -3,9 +3,10 @@ package hw.ch11;
 import java.util.List;
 
 public class Main {
+    static {
+        System.out.println("학번: 20220934 , 이름: 이하늘");
+    }
 
-
-    System.out.println("학번: 20220934 , 이름: 이하늘");
     public static void main(String[] args) {
         Directory root = new Directory("root");
         Directory bin = new Directory("bin");
