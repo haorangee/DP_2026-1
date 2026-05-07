@@ -1,27 +1,6 @@
 package hw.ch12;
 
 public class Main {
-    static class NumberedBorder extends Border {
-        public NumberedBorder(Display display) {
-            super(display);
-        }
-
-        @Override
-        public int getColumns() {
-            return display.getColumns() + 4;
-        }
-
-        @Override
-        public int getRows() {
-            return display.getRows();
-        }
-
-        @Override
-        public String getRowText(int row) {
-            return String.format("%2d| %s", row + 1, display.getRowText(row));
-        }
-    }
-
     public static void main(String[] args) {
         MultiStringDisplay md = new MultiStringDisplay();
 
@@ -29,6 +8,8 @@ public class Main {
         md.add("Decorator Pattern");
         md.add("is powerful.");
 
+        System.out.println("학번:20220934, 이름: 이하늘");
+        
         System.out.println("[2-1] 원본 출력");
         md.show();
 
@@ -48,3 +29,4 @@ public class Main {
         d3.show();
     }
 }
+
