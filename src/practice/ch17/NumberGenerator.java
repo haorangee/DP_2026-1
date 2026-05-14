@@ -24,7 +24,7 @@ public abstract class NumberGenerator {
     // Observer에 통지한다 
     public void notifyObservers() {
         for (Observer o: observers) {
-            o.update(this);  //관찰자에게 통지
+            o.update(this);  //관찰자에게 통지 (인자: 자기 자신 ==  관찰 대상)
         }
     }
 

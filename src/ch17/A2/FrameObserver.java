@@ -38,7 +38,7 @@ public class FrameObserver extends Frame implements Observer, ActionListener {
             repaint();
         }
 
-        public void paint(Graphics g) {
+        public void paint(Graphics g) { // 캔버스에 그림을 그림
             int width = getWidth();
             int height = getHeight();
             g.setColor(Color.white);
@@ -69,7 +69,7 @@ public class FrameObserver extends Frame implements Observer, ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println(e.toString());
-        System.exit(0);
+        System.exit(0);  // 정상적으로 종료됨
     }
 
     @Override
