@@ -5,7 +5,8 @@ public class EvenNumberGenerator extends NumberGenerator {
     private int end;		// 종료값(이 값은 포함하지 않는다)
 
     public EvenNumberGenerator(int start, int end) {
-        this.number = start;
+    
+        this.number = start; // 시작값은 짝수
         this.end = end;
     }
 

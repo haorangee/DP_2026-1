@@ -8,9 +8,9 @@ public class RangeObserver implements Observer {
         if (number < 10) {
             System.out.println("[Low]");
         } else if (number < 20) {
-            System.out.println("[Mid]");
+            System.out.println("Mid");
         } else {
-            System.out.println("[High]");
+            System.out.println("High");
         }
         try {
             Thread.sleep(100);  //0.1초 대기
