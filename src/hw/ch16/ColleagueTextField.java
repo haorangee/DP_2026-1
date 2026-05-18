@@ -17,7 +17,7 @@ public class ColleagueTextField extends TextField implements TextListener, Colle
     public void setMediator(Mediator mediator) {
         this.mediator = mediator;
     }
-
+                                                                                                                                                                                                                  
     // Mediator에서 활성/비활성을 지시한다
     @Override
     public void setColleagueEnabled(boolean enabled) {
