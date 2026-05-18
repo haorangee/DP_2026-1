@@ -1,0 +1,7 @@
+package hw.ch17;
+
+// 관찰자
+
+public interface Observer {
+    public abstract void update(NumberGenerator generator); //통지받을 때 호출되는 메서드
+}

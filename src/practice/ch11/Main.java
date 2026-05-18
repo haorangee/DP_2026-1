@@ -25,5 +25,5 @@ public class Main {
 
         //경로 출력
         root.printList();
-    
+    }
 }
