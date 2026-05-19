@@ -18,7 +18,7 @@ public class SafeFrame extends Frame implements ActionListener, Context {
     private Button buttonPhone = new Button("일반 통화");	// 일반 통화 버튼
     private Button buttonExit = new Button("종료");		// 종료 버튼
 
-    private State state = DayState.getInstance();		// 현재 상태 
+    private State state = DayState.getInstance();		// 현재 상태 , state에 어떤 객체가 담기느냐에 따라 야간 or 주간
 
     // 생성자 
     public SafeFrame(String title) {
@@ -54,7 +54,7 @@ public class SafeFrame extends Frame implements ActionListener, Context {
     public void actionPerformed(ActionEvent e) {
         System.out.println(e.toString());
         if (e.getSource() == buttonUse) {		// 금고 사용 버튼
-            state.doUse(this); // 현재 상태 객체에게 위임
+            state.doUse(this);           // 현재 상태 객체에게 위임
         } else if (e.getSource() == buttonAlarm) {	// 비상벨 버튼 
             state.doAlarm(this);
         } else if (e.getSource() == buttonPhone) {	// 일반 통화 버튼  

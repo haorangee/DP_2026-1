@@ -1,4 +1,4 @@
-package ch20.Sample;
+cdpackage ch20.Sample;
 
 public class Main {
     public static void main(String[] args) {
