@@ -14,12 +14,15 @@ public class BigChar {
     public BigChar(char charname) { // '3'
         this.charname = charname;
         try {
-            String filename = "big" + charname + ".txt";
+            String filename = "big" + charname + ".txt"; // big3.txt
+             
             StringBuilder sb = new StringBuilder();
+
             for (String line: Files.readAllLines(Path.of(filename))) {
                 sb.append(line);
                 sb.append("\n");
             }
+            
             this.fontdata = sb.toString();
         } catch (IOException e) {
             this.fontdata = charname + "?";

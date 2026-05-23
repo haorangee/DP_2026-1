@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("공유한 경우:");
         testAllocation(true);
+
         System.out.println("공유하지 않는 경우:");
         testAllocation(false);
     }
@@ -17,6 +18,7 @@ public class Main {
         showMemory();
     }
 
+    //메모리 사용량 계산 메소드
     public static void showMemory() {
         Runtime.getRuntime().gc();
         long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
