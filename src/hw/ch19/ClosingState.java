@@ -21,17 +21,18 @@ public class ClosingState implements State {
 
     @Override
     public void doUse(Context context) {		// 금고 사용 
-        context.recordLog("call! 마감 금고 점검");
+        context.callSecurityCenter("마감 금고 점검");
     }
 
     @Override
     public void doAlarm(Context context) {              // 비상벨 
-        context.callSecurityCenter("call! 비상벨(마감)");
+        context.callSecurityCenter("비상벨(마감)");
+        context.changeState(UrgentState.getInstance());
     }
 
     @Override
     public void doPhone(Context context) {              // 일반 통화 
-        context.callSecurityCenter("record ... 퇴근 확인 통화(마감)");
+        context.recordLog("퇴근 확인 통화(마감)");
     }
 
     @Override

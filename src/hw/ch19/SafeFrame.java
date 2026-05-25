@@ -52,12 +52,14 @@ public class SafeFrame extends Frame implements ActionListener, Context {
     // 버튼이 눌리면 여기로 온다
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(e.toString());
         if (e.getSource() == buttonUse) {		// 금고 사용 버튼
+            textScreen.append("[금고 사용 버튼]\n");
             state.doUse(this);
         } else if (e.getSource() == buttonAlarm) {	// 비상벨 버튼 
+            textScreen.append("[비상벨 버튼]\n");
             state.doAlarm(this);
         } else if (e.getSource() == buttonPhone) {	// 일반 통화 버튼  
+            textScreen.append("[일반 통화 버튼]\n");
             state.doPhone(this);
         } else if (e.getSource() == buttonExit) {	// 종료 버튼 
             System.exit(0);
@@ -78,7 +80,9 @@ public class SafeFrame extends Frame implements ActionListener, Context {
     // 상태 변화 
     @Override
     public void changeState(State state) {
-        System.out.println(this.state + "에서" + state + "으로 상태가 변화했습니다.");
+        String message = this.state + "에서" + state + "으로 상태가 변화했습니다.";
+        System.out.println(message);
+        textScreen.append(message + "\n");
         this.state = state;
     }
 
