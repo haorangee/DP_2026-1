@@ -8,6 +8,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Main extends JFrame implements MouseMotionListener, WindowListener {
+    
     // 그리기 이력 
     private MacroCommand history = new MacroCommand();
     // 그리는 영역 
@@ -20,7 +21,9 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
         super(title);
 
         this.addWindowListener(this);
-        canvas.addMouseMotionListener(this);
+
+        canvas.addMouseMotionListener(this);  // canvas에 마우스 모션 리스너 등록
+
         clearButton.addActionListener(e -> {
             history.clear();
             canvas.repaint();
@@ -42,11 +45,16 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
     public void mouseMoved(MouseEvent e) {
     }
 
+
+    // 커맨드 패턴의 핵심
     @Override
     public void mouseDragged(MouseEvent e) {
-        Command cmd = new DrawCommand(canvas, e.getPoint());
-        history.append(cmd);
-        cmd.execute();
+
+        System.out.println("mouseDragged: " + e.getPoint());
+
+        Command cmd = new DrawCommand(canvas, e.getPoint()); //명령어 객체가 생성됨
+        history.append(cmd); // 명령어가 이력에 추가됨
+        cmd.execute(); // 명령어가 실행됨 -> canvas에 점이 그려짐
     }
 
     // WindowListener용 

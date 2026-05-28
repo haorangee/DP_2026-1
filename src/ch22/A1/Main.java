@@ -32,16 +32,19 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
             canvas.init();
             canvas.repaint();
         });
+
         redButton.addActionListener(e -> {
-            Command cmd = new ColorCommand(canvas, Color.red);
-            history.append(cmd);
-            cmd.execute();
+            Command cmd = new ColorCommand(canvas, Color.red);  //컬러 커맨드 객체 생성
+            history.append(cmd); // 이력에 추가
+            cmd.execute(); // 컬러 커맨드 실행
         });
+
         greenButton.addActionListener(e -> {
             Command cmd = new ColorCommand(canvas, Color.green);
             history.append(cmd);
             cmd.execute();
         });
+        
         blueButton.addActionListener(e -> {
             Command cmd = new ColorCommand(canvas, Color.blue);
             history.append(cmd);

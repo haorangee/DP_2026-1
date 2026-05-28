@@ -27,8 +27,9 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
             history.clear();
             canvas.repaint();
         });
+        
         undoButton.addActionListener(e -> {
-            history.undo();
+            history.undo(); // 최근 명령 객체를 제거
             canvas.repaint();
         });
 

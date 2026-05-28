@@ -19,6 +19,8 @@ public class Main extends JFrame {
     public Main(String title) {
         super(title);
 
+
+        //리스너 클래스 따로 만들 필요 없이, 익명의 내부 클래스 만들어서 리스너 등록 -> 이거 나올수도
         this.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
