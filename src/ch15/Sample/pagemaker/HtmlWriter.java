@@ -3,6 +3,8 @@ package ch15.Sample.pagemaker;
 import java.io.Writer;
 import java.io.IOException;
 
+
+//open integrated file로 html 파일 열었음
 public class HtmlWriter {
     private Writer writer;
 
@@ -11,6 +13,7 @@ public class HtmlWriter {
     }
 
     // 타이틀 출력 
+    // 제일 먼저 호출되어야 하는 메소드
     public void title(String title) throws IOException {
         writer.write("<!DOCTYPE html>");
         writer.write("<html>");
@@ -31,7 +34,8 @@ public class HtmlWriter {
 
     // 링크 출력
     public void link(String href, String caption) throws IOException {
-        paragraph("<a href=\"" + href + "\">" + caption + "</a>");
+        // <a href="http://www.oreilly.co.jp/">오렐리 일본 사이트</a>
+        paragraph("<a href=\"" + href + "\">" + caption + "</a>"); // \"" 해야 맨 앞에 " 붙음. href="http://www.oreilly.co.jp/" 이렇게 출력됨
     }
 
     // 이메일 주소 출력 

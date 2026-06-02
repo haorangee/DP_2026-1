@@ -2,7 +2,7 @@ package ch15.Sample.pagemaker;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Properties;
+import java.util.Properties;  // 프로퍼티 파일을 읽어들이는 클래스
 
 public class Database {
     private Database() {
@@ -12,7 +12,7 @@ public class Database {
     public static Properties getProperties(String dbname) throws IOException {
         String filename = dbname + ".txt";
         Properties prop = new Properties();
-        prop.load(new FileReader(filename));
+        prop.load(new FileReader(filename)); //프러퍼티 파일에서 데이터를 읽어들임
         return prop;
     }
 }
