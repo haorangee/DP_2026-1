@@ -23,7 +23,7 @@ public abstract class Support {
         if (resolve(trouble)) { // 자기가 해결하려고 함
             done(trouble);
         } else if (next != null) { // 자기가 해결 못했는데, 뒷 사람이 있으면 ... (null 이 아니면)
-            next.support(trouble); // 뒷 사람에게 해결을 떠넘긴다
+            next.support(trouble); // 뒷 사람에게 해결을 떠넘긴다 (재귀적 호출)
         } else { // 뒷사람이 자기도 해결 못하고, 뒷사람도 없으면 ...
             fail(trouble); // 해결 못했다고 선언
         }
