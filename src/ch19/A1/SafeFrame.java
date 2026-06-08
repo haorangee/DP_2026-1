@@ -9,7 +9,7 @@ import java.awt.Panel;
 import java.awt.TextArea;
 import java.awt.TextField;
 
-public class SafeFrame extends Frame implements ActionListener, Context {
+public class SafeFrame extends Frame implements Context {
     private TextField textClock = new TextField(60);		// 현재 시간 표시
     private TextArea textScreen = new TextArea(10, 60);	// 경비 센터 출력
     private Button buttonUse = new Button("금고 사용");	// 금고 사용 버튼
